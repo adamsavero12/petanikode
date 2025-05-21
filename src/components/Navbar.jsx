@@ -1,5 +1,6 @@
 import React from 'react'
 import logo from './logo/images1.jpg'
+import { Link } from 'react-router-dom'
 
 export default function Navbar() {
   return (
@@ -16,7 +17,7 @@ export default function Navbar() {
                             <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4z"/>
                         </svg>
                         </div>
-                        <a href="">Home</a>
+                        <Link to="/"> Home </Link>
                     </li>
                     <li className='flex'>
                       <div className='mt-1 mr-2'>
@@ -33,7 +34,8 @@ export default function Navbar() {
                           <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2M9.5 3A1.5 1.5 0 0 0 11 4.5h2V9H3V2a1 1 0 0 1 1-1h5.5zM3 12v-2h2v2zm0 1h2v2H4a1 1 0 0 1-1-1zm3 2v-2h7v1a1 1 0 0 1-1 1zm7-3H6v-2h7z"/>
                         </svg>
                       </div>
-                        <a href="">Tutorial</a>
+                        <Link to="/api"> API</Link>
+
                     </li>
                     <li className='flex'>
                       <div className='mt-1 mr-2'>

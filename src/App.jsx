@@ -1,10 +1,10 @@
 import { useState } from 'react'
 import './App.css'
 import Navbar from './components/Navbar.jsx'
-import Hero from './components/Hero.jsx'
-import CardContain from './components/CardContain.jsx'
-import CardApi from './components/CardApi.jsx'
 import Footer from './components/Footer.jsx'
+import { Routes, Route } from 'react-router-dom'
+import Home from './Home.jsx'
+import Api from './Api.jsx'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -12,9 +12,12 @@ function App() {
   return (
     <>
       <Navbar />
-      <Hero />
-      <CardContain />
-      <CardApi />
+      <main>
+        <Routes>
+           <Route path="/" element={<Home />} />
+          <Route path="/api" element={<Api />} />
+        </Routes>
+      </main>
       <Footer />
     </>
   )
