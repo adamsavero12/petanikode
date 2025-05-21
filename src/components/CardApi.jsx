@@ -3,12 +3,12 @@ import { useEffect, useState } from 'react'
  
 
 export default function CardApi() {
-   const [posts, setPosts] = useState([])
+   const [card, setCard] = useState([])
 
     useEffect(() => {
       fetch('https://jsonplaceholder.typicode.com/posts?')
       .then(res => res.json())
-      .then(data => setPosts(data))
+      .then(data => setCard(data))
     }, [])
   
   return (
@@ -19,10 +19,10 @@ export default function CardApi() {
         <p className='text-slate-500 text-lg'>Baca artikel terbaru yang masih fresh dan hangat.</p>
       </div>
       <div className='grid grid-cols-3 gap-5 my-8'>
-        {posts.map(post => (
+        {card.map(post => (
           <div key={post.id} className='rounded-2xl px-6 py-8 bg-white shadow-lg'>
-                <div className='border-slate-500 border-2 flex justify-center items-center rounded-lg h-44'>
-                  <p className='text-2xl text-slate-500'>{post.id}</p>
+                <div className='border-slate-500 bg-teal-600 border-2 flex justify-center items-center rounded-lg h-44'>
+                  <p className='text-2xl text-white font-bold'>{post.id}</p>
                 </div>
                 <p className='pt-2 text-lg text-slate-900 font-bold mt-2'>{post.title}</p>
                 <p className='pt-2 text-slate-500 text-[16px]'>{post.body}</p>
